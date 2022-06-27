@@ -30,7 +30,13 @@ export const fetchContacts = () => {
         type: ContactActionTypes.FETCH_CONTACTS_SUCCESS,
         contacts: contact,
       });
-    } catch (error) {}
+    } catch (error) {
+      dispatch({
+        type: ContactActionTypes.FETCH_CONTACTS_FAILURE,
+        error:
+          'Something went wrong while requesting data, please try again later',
+      });
+    }
   };
 };
 
