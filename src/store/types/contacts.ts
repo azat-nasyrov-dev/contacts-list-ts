@@ -45,7 +45,7 @@ interface FetchContactsRequest {
 
 interface FetchContactsSuccess {
   type: ContactActionTypes.FETCH_CONTACTS_SUCCESS;
-  contacts: any[];
+  contacts: unknown[];
 }
 
 interface FetchContactsFailure {

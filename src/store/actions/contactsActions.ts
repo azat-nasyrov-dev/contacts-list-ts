@@ -6,7 +6,7 @@ export const postContact = (contact: {}) => {
   return async (dispatch: Dispatch<ContactActions>) => {
     try {
       dispatch({ type: ContactActionTypes.POST_CONTACT_REQUEST });
-      await axiosContacts.post('contact.json', contact);
+      await axiosContacts.post('contacts.json', contact);
       dispatch({ type: ContactActionTypes.POST_CONTACT_SUCCESS });
     } catch (error) {
       dispatch({
